@@ -13,3 +13,7 @@ enabled = true
 [[testcases]]
 name = "peer-routing"
 instances = { min = 6, max = 100, default = 12 }
+
+[[testcases]]
+name = "content-routing"
+instances = { min = 6, max = 100, default = 12 }

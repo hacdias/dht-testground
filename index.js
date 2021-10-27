@@ -1,7 +1,8 @@
 const { invokeMap } = require('@testground/sdk')
 
 const testCases = {
-  'peer-routing': require('./peer-routing')
+  'peer-routing': require('./peer-routing'),
+  'content-routing': require('./content-routing')
 }
 
 ;(async () => {
