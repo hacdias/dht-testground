@@ -86,11 +86,9 @@ module.exports = bureaucracy(async (runenv, client, netclient) => {
     // Wait for all the nodes before exiting.
     await client.signalAndWait(states.done, runenv.testInstanceCount)
   } finally {
+    // TODO: node hangs while stopping. Adding a delay reduces the likeliness.
+    await delay(10000)
     runenv.recordMessage('stopping node')
-    if (node) {
-      // TODO: this hangs, leading to a failures due to exceeded deadlines.
-      await node.stop()
-    }
-    runenv.recordMessage('stopping node')
+    if (node) await node.stop()
   }
 })

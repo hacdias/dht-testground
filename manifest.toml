@@ -16,4 +16,4 @@ instances = { min = 6, max = 100, default = 12 }
 
 [[testcases]]
 name = "content-routing"
-instances = { min = 6, max = 100, default = 12 }
+instances = { min = 3, max = 100, default = 12 }
